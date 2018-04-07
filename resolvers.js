@@ -31,9 +31,9 @@ const resolvers = {
             return coursesData;
         },
         course: (root, {id}) => {
-            return coursesData.filter(course => {
+            return coursesData.find(course => {
                 return course.id === id;
-            })[0];
+            });
         }
     }
 }
